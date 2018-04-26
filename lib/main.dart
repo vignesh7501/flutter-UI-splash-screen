@@ -19,8 +19,8 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   startTime() async {
-    var duration = new Duration(seconds: 2);
-    return new Timer(duration, navigationPage);
+    var _duration = new Duration(seconds: 2);
+    return new Timer(_duration, navigationPage);
   }
 
   void navigationPage() {
@@ -35,25 +35,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var _decoratedBox = new DecoratedBox(
-      decoration: new BoxDecoration(
-        image: new DecorationImage(
-          image: new AssetImage('images/cumulations.png'),
-        ),
-      ),
-    );
-
-    var _hero = new Hero(tag: 'hero-flutterwithlogo-tag', child: _decoratedBox);
-
-    var _container = new Container(
-      child: _hero,
-      width: 150.0,
-      height: 100.0,
-    );
-
     return new Scaffold(
       body: new Center(
-        child: _container,
+        child: new Image.asset('images/flutterwithlogo.png'),
       ),
     );
   }
